@@ -52,8 +52,7 @@ gulp.task('css-deps', function () {
 gulp.task('js', function () {
     var baseDir = __dirname + '/public/javascripts',
         outputDir = __dirname + '/build/js',
-        outputFilename = 'app.js',
-        env = envfile.parseFileSync('.env');
+        outputFilename = 'app.js';
 
     gulp.src([
         baseDir + "/*module.js",
@@ -65,7 +64,7 @@ gulp.task('js', function () {
         .pipe(sourcemaps.init())
         .pipe(concat(outputFilename))
         .pipe(ngAnnotate())
-        .pipe(gulpif(env.PRODUCTION === 'true', uglify()))
+        .pipe(uglify())
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(outputDir))
         .pipe(livereload());
