@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     ngAnnotate = require('gulp-ng-annotate'),
     watch = require('gulp-watch'),
-    gulpif = require('gulp-if'),
+    //gulpif = require('gulp-if'),
     livereload = require('gulp-livereload'),
     serve = require('gulp-serve');
 
@@ -60,8 +60,8 @@ gulp.task('js', function () {
         //.pipe(sourcemaps.init())
         .pipe(concat(outputFilename))
         .pipe(ngAnnotate())
-        .pipe(uglify())
-        .pipe(sourcemaps.write())
+        //.pipe(uglify())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest(outputDir))
         .pipe(livereload());
 });
