@@ -11,7 +11,7 @@
 
             vm.makeMovies = function (data) {
                 _.each(data, function (l) {
-                   vm.movies.push(new Movie(l));
+                    vm.movies.push(new Movie(l));
                 });
                 return vm.movies;
             };
@@ -29,7 +29,5 @@
             vm.find = function (movie_title) {
                 return _.find(vm.movies, {title: movie_title});
             };
-
         });
-
 }());

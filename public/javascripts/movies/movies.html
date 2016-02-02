@@ -1,11 +1,13 @@
+<!-- TODO make it look nice -->
 
-<div>
+<div data-ui-view>
     <h1>I'm in a partial</h1>
     <ul>
         <li data-ng-repeat="movie in movies.movies" class="movie">
-            <h3>{{ movie.title }}</h3>
+            <h3><a data-ui-sref="movies.movie ({ movie_title: movie.title })">{{ movie.title | capitalize }}</a></h3>
             <p class="movie-details">
                 <span>Length: {{ movie.runTime }} minutes |</span>
+                <span>Released: {{ movie.releaseYear}} |</span>
                 <span>Genre: {{ movie.genre | capitalize }}</span>
             </p>
         </li>
