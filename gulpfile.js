@@ -8,7 +8,6 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     ngAnnotate = require('gulp-ng-annotate'),
     watch = require('gulp-watch'),
-    gulpif = require('gulp-if'),
     livereload = require('gulp-livereload');
 
 gulp.task('js-deps', function () {
