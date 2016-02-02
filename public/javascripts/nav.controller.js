@@ -1,17 +1,18 @@
+
 (function () {
 
-   'use strict';
+    'use strict';
 
-   angular.module('app')
-       .controller('NavController', function (){
-           var vm = this;
+    angular.module('app')
+        .controller('NavController', function () {
+            var vm = this;
 
-           vm.whatever = {
-               name: 'Neil',
-               age: '33'
-           };
+            vm.info = {
+                name: 'Adam',
+                age: '31'
+            };
 
-
-       });
+        });
 
 }());
+
