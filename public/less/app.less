@@ -1,20 +1,40 @@
 body {
-
+  font-family: 'Roboto', sans-serif; font-weight: 300;
+  background-color: #b9f6ca;
 }
 
 .movie {
   list-style: none;
   background-color: #faebcc;
-  border-radius: 1px;
-  padding: 0 0 8px 8px;
+  border-radius: 2px;
+  border: 1px solid white;
+  padding: 6px 0 8px 8px;
   margin-bottom: 4px;
 }
 
 .movie-title {
-  margin-top: 8px;
+  margin: 8px;
+  display: inline;
 }
 
 .movie-details {
   font-style: italic;
   margin-bottom: 16px;
+  background-color: #7cffb8;
+}
+
+.movie-details span {
+  padding-left: 16px;
+}
+
+ul li:nth-child(even) {
+  background-color: #dddddd;
+}
+
+ul li:nth-child(odd) {
+  background-color: #d4d4d4;
+}
+
+ul {
+  box-shadow: 5px 5px 9px #888;
 }
