@@ -1,14 +1,14 @@
 <!-- TODO make it look nice -->
 
 <div data-ui-view>
-    <h1>I'm in a partial</h1>
-    <ul>
+    <h1 class="app-title">Check out these Movies</h1>
+    <ul class="list">
         <li data-ng-repeat="movie in movies.movies" class="movie">
-            <h3><a data-ui-sref="movies.movie ({ movie_title: movie.title })">{{ movie.title | capitalize }}</a></h3>
+            <h3 class="movie-title"><a data-ui-sref="movies.movie ({ movie_title: movie.title })">{{ movie.title | titleCase }}</a></h3>
             <p class="movie-details">
                 <span>Length: {{ movie.runTime }} minutes |</span>
                 <span>Released: {{ movie.releaseYear}} |</span>
-                <span>Genre: {{ movie.genre | capitalize }}</span>
+                <span>Genre: {{ movie.genre | titleCase }}</span>
             </p>
         </li>
     </ul>

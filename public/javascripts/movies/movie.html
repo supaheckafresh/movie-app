@@ -1,8 +1,8 @@
 <div data-ui-view>
-    <h1>{{ movie.movie.title | capitalize }}</h1>
+    <h1>{{ movie.movie.title | titleCase }}</h1>
     <p class="movie-details">
         <span>Length: {{ movie.movie.runTime }} minutes |</span>
         <span>Released: {{ movie.movie.releaseYear}} |</span>
-        <span>Genre: {{ movie.movie.genre | capitalize }}</span>
+        <span>Genre: {{ movie.movie.genre | titleCase }}</span>
     </p>
 </div>

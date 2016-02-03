@@ -2,25 +2,34 @@
 
     'use strict';
 
-    angular.module('textFilters', []).filter('capitalize', function() {
+    angular.module('textFilters', []).filter('titleCase', function() {
         return function(input) {
-            if (input!== null)
-                input = input.toLowerCase();
-            return input.substring(0,1).toUpperCase()+input.substring(1);
+
+            var title = [];
+
+            if (input!== null) {
+                var inputCopy = input.toLowerCase().split(' ');
+
+                _.each(inputCopy, function (word) {
+                    if (inputCopy.indexOf(word) === 0 || !isLower(word)) {
+                        title.push(word.substring(0, 1).toUpperCase() + word.substring(1));
+                    } else {
+                        title.push(word);
+                    }
+                });
+            }
+            return title.join(' ');
         };
     });
 
-    //angular.module('textFilters', []).filter('capitalize', function() {
-    //    return function(input) {
-    //        if (input !== null)
-    //            input = input.toLowerCase();
-    //        input = input.split(' ');
-    //
-    //        for (var i = 0, len = input.length; i < len; i++) {
-    //            //TODO capitalize each word unless of for etc.
-    //            input.substring(0, 1).toUpperCase() + input.substring(1);
-    //        }
-    //    };
-    //});
+    function  isLower(word) {
+        var lWords = ['of', 'the', 'a', 'in', 'at', 'and', 'an', 'but', 'or', 'to', 'the'];
+
+        for (var i = 0, len = lWords.length; i < len; i++) {
+            if (word === lWords[i]) {
+                return true;
+            }
+        }
+    }
 
 }());

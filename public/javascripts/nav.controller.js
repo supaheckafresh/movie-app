@@ -8,8 +8,8 @@
             var vm = this;
 
             vm.info = {
-                name: 'Adam',
-                age: '31'
+                name: 'nav controller content',
+                other: 'stuff'
             };
 
         });
