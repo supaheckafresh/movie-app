@@ -1,4 +1,3 @@
-<!-- TODO show availability of movies somehow  -->
 
 <div data-ui-view>
     <h1 class="app-title">Check out these Movies</h1>
@@ -6,6 +5,17 @@
         <li data-ng-repeat="movie in movies.movies" class="movie">
             <span><i class="fa fa-film fa-2x"></i></span>
             <h3 class="movie-title"><a data-ui-sref="movies.movie ({ movie_title: movie.title })">{{ movie.title | titlecase }}</a></h3>
+
+            <!-- checkedIn status display -->
+            <span class="available" ng-if="movie.checkedIn"> | <i class="fa fa-check-square"></i>
+                <a href="#">available</a>
+            </span>
+
+            <span class="checked-out" ng-if="!movie.checkedIn"> | <i class="fa fa-times-circle"></i>
+                currently checked out
+            </span>
+
+            
             <div class="movie-details">
                 <span><i class="fa fa-clock-o fa-1x"></i>{{ movie.runTime }} min</span>
                 <span><i class="fa fa-calendar fa-1x"></i>{{ movie.releaseYear}}</span>
