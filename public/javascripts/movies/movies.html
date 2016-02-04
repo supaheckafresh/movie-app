@@ -2,7 +2,7 @@
 <div data-ui-view>
     <h1 class="app-title">Check out these Movies</h1>
     <ul class="list">
-        <li data-ng-repeat="movie in movies.movies" class="movie">
+        <li data-ng-repeat="movie in movies.movies" class="movie row">
             <span><i class="fa fa-film fa-2x"></i></span>
             <h3 class="movie-title"><a data-ui-sref="movies.movie ({ movie_title: movie.title })">{{ movie.title | titlecase }}</a></h3>
 
