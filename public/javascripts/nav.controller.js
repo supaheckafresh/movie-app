@@ -7,12 +7,11 @@
         .controller('NavController', function () {
             var vm = this;
 
-            vm.info = {
-                name: 'nav controller content',
-                other: 'stuff'
+            vm.views = {
+                movies: 'Home',
+                contact: 'Contact'
             };
 
         });
 
 }());
-
