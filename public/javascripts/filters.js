@@ -2,25 +2,27 @@
 
     'use strict';
 
-    angular.module('textFilters', []).filter('titleCase', function() {
-        return function(input) {
+    angular.module('customFilters', [])
 
-            var title = [];
+        .filter('titlecase', function() {
+            return function(input) {
 
-            if (input!== null) {
-                var inputCopy = input.toLowerCase().split(' ');
+                var title = [];
 
-                _.each(inputCopy, function (word) {
-                    if (inputCopy.indexOf(word) === 0 || !isLower(word)) {
-                        title.push(word.substring(0, 1).toUpperCase() + word.substring(1));
-                    } else {
-                        title.push(word);
-                    }
-                });
-            }
-            return title.join(' ');
-        };
-    });
+                if (input!== null) {
+                    var inputCopy = input.toLowerCase().split(' ');
+
+                    _.each(inputCopy, function (word) {
+                        if (inputCopy.indexOf(word) === 0 || !isLower(word)) {
+                            title.push(word.substring(0, 1).toUpperCase() + word.substring(1));
+                        } else {
+                            title.push(word);
+                        }
+                    });
+                }
+                return title.join(' ');
+            };
+        });
 
     function  isLower(word) {
         var lWords = ['of', 'the', 'a', 'in', 'at', 'and', 'an', 'but', 'or', 'to', 'the'];
