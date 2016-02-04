@@ -2,7 +2,7 @@
 
     'use strict';
 
-    angular.module('app', ['ui.router', 'ui.bootstrap', 'customFilters'])
+    angular.module('app', ['ui.router', 'ui.bootstrap', 'customFilters', 'navMenu'])
         .config(function ($stateProvider, $urlRouterProvider, $httpProvider) {
             /**
              * Default state
