@@ -3,11 +3,11 @@
     <h1 class="movie-title">{{ movie.movie.title | titlecase }}</h1>
 
     <!-- checkedIn status display -->
-    <span class="available" ng-if="movie.movie.checkedIn"> | <i class="fa fa-check-square"></i>
+    <span class="available" data-ng-if="movie.movie.checkedIn" data-ng-click="movie.movie.checkInOut()"> | <i class="fa fa-check-square"></i>
         <a href="#">available</a>
     </span>
 
-    <span class="checked-out" ng-if="!movie.movie.checkedIn"> | <i class="fa fa-times-circle"></i>
+    <span class="checked-out" data-ng-if="!movie.movie.checkedIn"> | <i class="fa fa-times-circle"></i>
         currently checked out
     </span>
 
