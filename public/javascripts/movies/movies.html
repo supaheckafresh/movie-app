@@ -7,8 +7,8 @@
             <h3 class="movie-title"><a data-ui-sref="movies.movie ({ movie_title: movie.title })">{{ movie.title | titlecase }}</a></h3>
 
             <!-- checkedIn status display -->
-            <span class="available" data-ng-if="movie.checkedIn == true"> | <i class="fa fa-check-square"></i>
-                <a data-ui-sref="/movies">available</a>
+            <span class="available" data-ng-if="movie.checkedIn == true" data-ng-click="movie.checkInOut()"> | <i class="fa fa-check-square"></i>
+                <a data-ui-sref="">available</a>
             </span>
 
             <span class="checked-out" data-ng-if="movie.checkedIn == false"> | <i class="fa fa-times-circle"></i>
