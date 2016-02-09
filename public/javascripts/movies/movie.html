@@ -7,7 +7,7 @@
         <a href="#">available</a>
     </span>
 
-    <span class="checked-out" data-ng-if="!movie.movie.checkedIn"> | <i class="fa fa-times-circle"></i>
+    <span class="checked-out" data-ng-if="!movie.movie.checkedIn" data-ng-click="movie.movie.checkInOut()"> | <i class="fa fa-times-circle"></i>
         currently checked out
     </span>
 

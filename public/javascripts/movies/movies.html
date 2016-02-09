@@ -11,7 +11,7 @@
                 available
             </span>
 
-            <span class="checked-out" data-ng-if="movie.checkedIn == false"> | <i class="fa fa-times-circle"></i>
+            <span class="checked-out" data-ng-if="movie.checkedIn == false" data-ng-click="movie.checkInOut()"> | <i class="fa fa-times-circle"></i>
                 currently checked out
             </span>
 
