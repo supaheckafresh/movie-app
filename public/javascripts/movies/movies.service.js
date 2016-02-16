@@ -29,5 +29,6 @@
             vm.find = function (movie_title) {
                 return _.find(vm.movies, {title: movie_title});
             };
+            
         });
 }());
